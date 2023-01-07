@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43818181"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/record"
+        android:layout_width="415dp"
+        android:layout_height="44dp"
+
+        android:layout_marginBottom="212dp"
+        android:background="#80FFC107"
+        android:gravity="center"
+        android:text="RECORD: 0  "
+        android:textAlignment="gravity"
+        android:textColor="#6D4C41"
+        app:layout_constraintBottom_toTopOf="@+id/tablaBanderas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/racha_aciertos" />
+
+    <TextView
+        android:id="@+id/racha_aciertos"
+        android:layout_width="415dp"
+        android:layout_height="44dp"
+
+        android:background="#80E91E63"
+        android:gravity="center"
+        android:text="RACHA ACTUAL: 0  "
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aciertos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/aciertos"
+        android:layout_width="415dp"
+        android:layout_height="44dp"
+
+        android:background="#805FB838"
+        android:gravity="center"
+        android:text="ACIERTOS: 0  "
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/racha_aciertos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intentos" />
+
+    <TextView
+        android:id="@+id/intentos"
+        android:layout_width="412dp"
+        android:layout_height="45dp"
+        android:background="#80673AB7"
+        android:gravity="center"
+        android:text="INTENTOS: 0  "
+
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombreBandera"
+        android:layout_width="419dp"
+        android:layout_height="42dp"
+        android:background="#8000BCD4"
+        android:gravity="center"
+        android:text="¿Cúal es la bandera de PAIS?"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+
+        android:id="@+id/tablaBanderas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/nombreBandera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aciertos">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/bandera0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ad" />
+
+            <ImageButton
+                android:id="@+id/bandera1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ad" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
